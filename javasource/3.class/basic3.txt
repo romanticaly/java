@@ -94,10 +94,10 @@ class : class는 객체를 생성하기 위한 틀
 	    단, 인자값의 갯수가 다르거나 타입이달라야한다.
 	    예)
 	    public void a() {}
-	    public void a() {}			//x
+	    public void a() {}		//x
 	    public void a(int x) {}		//o
 	    public void a(int y) {}		//x
-	    public void a() {}			//x
+	    public void a() {}		//x
 	    public void a(int x, String b) {}	//o
 	    public void a(int x, int y) {}	//o
 	    public void a(String b, int y) {}	//o
