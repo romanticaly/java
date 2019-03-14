@@ -7,8 +7,8 @@
 	내체력 40이하일 경우는 변경 불가
 */
 public class Marine{
-		
-		/*int my;
+		/*
+		int my;
 		int com;
 		String HP1;
 		String HP2;
@@ -50,9 +50,11 @@ public class Marine{
 
 		int HP;
 		int Mode;
+		int power;
 
 		public Marine(){
 			HP = 100;
+			power =15;
 		}
 
 		/*public void attack(){
@@ -79,19 +81,21 @@ public class Marine{
 				
 			}*/
 			void attack(Marine enemy, int count){
-				for(int i=0; i<count;i++){
+				for(int i=0; i<count; i++){
 					enemy.HP -= power;
 				}
 			}
 			
 
 			void changeMode(){
-				if(HP<40){
+				if(HP>40){
 					if(Mode == 0){
 						Mode = 1;
 						HP -= 25;
+						power = 15;
 					} else {
 						Mode = 0;
+						power = 10;
 					}
 
 				} else {
@@ -103,5 +107,3 @@ public class Marine{
 				return HP < 0 ? "die" : HP + " ";
 			}
 }
-
-	
