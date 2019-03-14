@@ -1,0 +1,169 @@
+* java setting
+1. oracle.com >> jdk download >> 설치
+2. 환경변수 설정 (내컴퓨터에서 오른쪽 마우스 >> 속성 >> 고급시스템설정 >> 환경변수 >> 시스템변수)
+///////////////////////////새로만들기////////////////////////////
+      변수이름                              값
+  2-1 JAVA_HOME             C:\Program Files\Java\jdk1.8.0_202
+  2-2 CLASSPATH             .
+/////////////////////////////편집/////////////////////////////////  
+  2-3 PATH                  %JAVA_HOME%\bin;    C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\app\Administrator\product\11.2.0
+                                                \dbhome_3\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell
+                                                \v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;F:\javadata\setting\Git\cmd
+  2-4 설정확인(cmd)
+  
+
+* 실행방법
+
+                                              (byte code)
+  *.java            >>      compile       >>    *.class       >>      run
+HelloJava.java         	                     HelloJava.class
+	             javac HelloJava.java                       java HelloJava 
+		     
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* 순서
+1. 변수(variable) (자료형, data type)
+2. 연산자(operator)
+3. 제어문(조건문[if, switch ~ case], 반복문[for, while, do ~ while])
+4. class (일반, 추상, 내부, interface), 상속
+   - field (속성)
+   - method (기능)
+5. package
+   - 사용자정의 package
+   - system package
+     - java.lang
+     - java.io
+     - java.net
+     - java.util
+     - java.awt
+     - java.sql
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*접근제어자 (access modifier)
+ private          자신의 클래스 안에서만 사용가능
+ default(생략)    private + 같은 package(폴더)안에서는 사용 가능
+ protected        default + package가 달라도 두 믈래스가 상속 관계일 경우 사용가능
+ public           조건 제한없이 사용가능
+ 
+*자료형 (data type)
+ data type
+   - 기본형 DT		DT		size	etc
+     - 논리형		boolean		1byte	true,false
+     - 문자형		char		2byte	'1'=49 문자 1의 값은 49 'a','김'   'abc'<< X - 문자열
+     - 숫자형					특수문자 : '\t' (tab) '\n' (enter) '\'' ('), '\"' ("),'\\' (\)
+       - 정수형		byte		1byte	
+			short		2byte	
+			int		4byte	
+			long		8byte	
+       - 실수형		float		4byte		
+       			double		8byte	
+
+   - 참조형 DT :  Object, 배열(array)
+
+*명명규칙
+1. 영문, 숫자, 한글가능, 영문으로시작(숫자로 시작X)
+2. 클래스는 대문자로, 매소드나 변수는 소문자로 시작
+   합성어의 경우 단어의 첫글자를 대문자로. (Camelcase)
+3. 특수문자 사용금지(단 _와 $는 가능)
+4. 예약어 사용금지
+
+*주석문
+// : 한줄주석
+/*
+.
+.
+.
+*/ : 여러줄주석
+
+/**
+*
+*
+*/ : document 주석
+
+
+1. 변수 (variable) : 하나의 값을 저장하는 공간
+  1-1 기본(primitive) Data Type
+    1-1-1 선언
+      형식)
+        접근제어자 자료형 변수명;
+	예)
+	   private int age;
+	   char gender;
+	   public String carName;
+	   boolean flag;
+
+    1-1-2 사용 (값저장, 값할당)
+      형식)
+	변수명 = 값;
+        예)
+	  age = 25;
+	  gender = '남';
+	  carName = '쏘나타';
+	  flag = true;
+  
+          >>>>>>>>>>>>>>>>>1, 2를 동시에...
+	형식)
+	  접근제어자 자료형 변수명 = 값;
+	  예)
+	     private int age = 25;
+	     char gender = '여';
+	     public String carName = "쏘나타";
+	     boolean flag = true;
+
+      선언은 한번만 할수 있지만 사용은 여러번 할수있다.
+
+  1-2 참조형(reference) Data Type
+
+
+2. 연산자 (Operator)
+  2-1 단항연산자
+   a. 1 증가(감소)연산자 : ++, --
+      변수++ : 선실행 후증가
+      ++변수 : 선증가 후실행
+      예)
+      int X = 10;
+      S.o.p(x);		10
+      S.o.p(x++);	10     11
+      S.o.p(--x);	10     10
+      S.o.p(x++);	10     11
+      S.o.p(++x);	12     12
+      S.o.p(x--);	12     11
+      S.o.p(--x);	10     10
+      S.o.p(x++);	10     11
+      S.o.p(x);		11
+
+   2-2 이항연산자
+     a. 산술연산자 : *,/,%,+,-
+     b. 비교연산자
+        >,>=,<,<=,==,!=
+	instance of : 객체의 type 비교
+     c. 논리연산자
+        &&(and)
+	 &&  T    F
+        -------------
+	  T  T    F
+
+	  F  F    F
+		
+
+	||(or)
+	 ||  T    F
+	-------------
+	  T  T    T
+
+	  F  T    F
+
+     2-3 삼항연산자
+       a. 조건(conditions) ? 값1 : 값2
+       조건 true >> 값1
+            false >> 값2
+
+     2-4 대입연산자 : =, +=, -+, *=, /=, %=
+
+test)
+int x = 10;
+x의 값을 1증가시키는 방법?
+
+int x = 10;
+System.out.println(x++);

@@ -1,0 +1,14 @@
+public class IfElseIfTest1 {
+	public static void main(String[] args){
+		int x = 10;
+		int y = 10;
+		if(x > y){
+			System.out.println(x + "는" + y + "보다크다.");
+		} else if (x == y)	{
+			System.out.println(x + "는" + y + "와 같다.");
+		} else {
+			System.out.println(x + "는" + y + "보다작다.");
+		}
+		
+	}
+}
