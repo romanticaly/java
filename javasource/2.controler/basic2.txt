@@ -8,8 +8,8 @@
    실행문2.
 
     결과)
-    조건식 true		: 실행문1.---> 실행문2.
-           false	: 실행문2.
+    조건식  true		: 실행문1.---> 실행문2.
+              false	: 실행문2.
 
   1-2. if ~ else 문
    형식)
@@ -22,7 +22,7 @@
 
    결과)
     조건식 true		: 실행문1.---> 실행문3. 
-           false	: 실행문2.---> 실행문3.
+             false	: 실행문2.---> 실행문3.
    
   1-3. if ~ else if ~ else 문
    형식)
@@ -35,7 +35,7 @@
 
    결과)
     조건식1 true	: 실행문1.--->실행문end;	
-            false	: 조건식2 true	:실행문N.--->실행문end;
+               false	: 조건식2 true	:실행문N.--->실행문end;
 				  false	:실행문end;
   
   1-4. switch ~ case 문 : switch의 값비교는 숫자형만 가능
@@ -75,7 +75,7 @@
    }
    결과)
    조건식 true  : 실행문 반복
-	  false : while end
+            false : while end
 
   2-3. do ~ while문
    형식)
@@ -85,7 +85,7 @@
    결과)
    실행문
    조건식 true  : 실행문 반복
-   	  false : while end
+            false : while end
 
  
 3. 기타
